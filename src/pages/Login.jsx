@@ -60,7 +60,7 @@ export default function Login({ onLogin }) {
           <div className="hidden md:flex flex-col justify-end bg-linear-to-br from-[#00c27a]/10 to-[#004d39]/20 w-[45%] p-6 relative">
             <div className="absolute inset-4 flex items-center justify-center">
               <img
-                src="/map.gif"
+                src="/mp.gif"
                 alt="login"
                 className="w-full h-auto object-contain opacity-90 rounded-2xl"
               />
