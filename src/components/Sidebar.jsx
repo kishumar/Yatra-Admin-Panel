@@ -49,7 +49,7 @@ export default function Sidebar({ onToggle }) {
   const handleLogout = async () => {
     try {
       await axios.post(
-        "http://localhost:5000/api/auth/logout",
+        "https://yatra-backend-admin.onrender.com/api/auth/logout",
         {},
         { withCredentials: true }
       );

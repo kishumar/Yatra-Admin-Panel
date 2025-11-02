@@ -12,7 +12,7 @@ export default function Navbar({ isCollapsed }) {
   useEffect(() => {
     const fetchUser = async () => {
       try {
-        const res = await axios.get("http://localhost:5000/api/auth/me", {
+        const res = await axios.get("https://yatra-backend-admin.onrender.com/api/auth/me", {
           withCredentials: true,
         });
         const name = res.data?.user?.name || "A";

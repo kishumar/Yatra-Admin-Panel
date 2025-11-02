@@ -10,7 +10,7 @@ const ProtectedRoute = ({ children }) => {
   useEffect(() => {
     const verifyUser = async () => {
       try {
-        const res = await axios.get("http://localhost:5000/api/auth/check", {
+        const res = await axios.get("https://yatra-backend-admin.onrender.com/api/auth/check", {
           withCredentials: true, // ✅ sends the cookie
         });
 
