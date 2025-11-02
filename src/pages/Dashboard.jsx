@@ -50,13 +50,13 @@ const STATS = [
     icon: <DollarSign size={28} />,
     gradient: "from-amber-400 to-orange-500",
   },
-  {
-    title: "Growth",
-    value: "18.5%",
-    change: "+5%",
-    icon: <TrendingUp size={28} />,
-    gradient: "from-[#1FCC79] to-[#00A76F]",
-  },
+  // {
+  //   title: "Growth",
+  //   value: "18.5%",
+  //   change: "+5%",
+  //   icon: <TrendingUp size={28} />,
+  //   gradient: "from-[#1FCC79] to-[#00A76F]",
+  // },
 ];
 
 const RECENT_ACTIVITIES = [
