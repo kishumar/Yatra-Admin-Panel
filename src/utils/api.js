@@ -2,7 +2,7 @@
 import axios from "axios";
 
 const api = axios.create({
-  baseURL: import.meta.env.VITE_API_BASE_URL || "https://yatra-backend-admin.onrender.com/api",
+  baseURL: "https://yatra-backend-admin.onrender.com/api",
   //  headers: { Authorization: `Bearer ${token}` },
   withCredentials: true, 
 
