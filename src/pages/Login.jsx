@@ -17,7 +17,7 @@ export default function Login({ onLogin }) {
     setLoading(true);
     try {
       const res = await axios.post(
-        "http://localhost:5000/api/auth/login",
+        "https://yatra-backend-admin.onrender.com/api/auth/login",
         { email, password },
         { withCredentials: true }
       );

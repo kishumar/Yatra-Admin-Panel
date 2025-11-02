@@ -17,7 +17,7 @@ export default function Drivers({ collapsed }) {
   // Fetch drivers
   const fetchDrivers = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/drivers");
+      const res = await axios.get("https://yatra-backend-admin.onrender.com/api/drivers");
       setDrivers(res.data.drivers || []);
     } catch (err) {
       console.error("Error fetching drivers", err);
@@ -37,7 +37,7 @@ export default function Drivers({ collapsed }) {
       return;
     }
     try {
-      const res = await axios.post("http://localhost:5000/api/drivers", newDriver);
+      const res = await axios.post("https://yatra-backend-admin.onrender.com/api/drivers", newDriver);
       setDrivers((prev) => [...prev, res.data.driver]);
       toast.success("Driver added successfully!");
       setNewDriver({ name: "", license: "", contact: "" });
@@ -51,7 +51,7 @@ export default function Drivers({ collapsed }) {
   // Toggle status
   const toggleDriverStatus = async (id) => {
     try {
-      const res = await axios.patch(`http://localhost:5000/api/drivers/${id}/status`);
+      const res = await axios.patch(`https://yatra-backend-admin.onrender.com/api/drivers/${id}/status`);
       const updatedStatus = res.data.driver.status;
       setDrivers((prev) =>
         prev.map((d) => (d._id === id ? { ...d, status: updatedStatus } : d))
@@ -79,7 +79,7 @@ export default function Drivers({ collapsed }) {
       return;
     }
     try {
-      const res = await axios.put(`http://localhost:5000/api/drivers/${_id}`, editPayload);
+      const res = await axios.put(`https://yatra-backend-admin.onrender.com/api/drivers/${_id}`, editPayload);
       const updatedDriver = res.data.driver;
       setDrivers((prev) => prev.map((d) => (d._id === _id ? updatedDriver : d)));
       toast.success("Driver updated successfully!");

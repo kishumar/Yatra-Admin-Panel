@@ -30,7 +30,7 @@ const Register = () => {
 
     setLoading(true);
     try {
-      await axios.post("http://localhost:5000/api/auth/register", {
+      await axios.post("https://yatra-backend-admin.onrender.com/api/auth/register", {
         name,
         email,
         password,

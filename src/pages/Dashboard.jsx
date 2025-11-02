@@ -75,7 +75,7 @@ export default function Dashboard({ collapsed }) {
   useEffect(() => {
     const fetchRecentDrivers = async () => {
       try {
-        const res = await axios.get("http://localhost:5000/api/drivers?recent=true");
+        const res = await axios.get("https://yatra-backend-admin.onrender.com/api/drivers?recent=true");
         setRecentDrivers(res.data.drivers || []);
       } catch (error) {
         console.error("Error fetching recent drivers:", error);

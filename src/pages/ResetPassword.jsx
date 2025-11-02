@@ -87,7 +87,7 @@ export default function ResetPassword() {
   const handleReset = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("http://localhost:5000/api/auth/reset-password", {
+      await axios.post("https://yatra-backend-admin.onrender.com/api/auth/reset-password", {
         email,
         newPassword,
       });

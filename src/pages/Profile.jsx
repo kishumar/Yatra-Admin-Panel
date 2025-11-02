@@ -12,7 +12,7 @@ export default function Profile() {
   useEffect(() => {
     const fetchProfile = async () => {
       try {
-        const { data } = await axios.get("http://localhost:5000/api/profile", {
+        const { data } = await axios.get("https://yatra-backend-admin.onrender.com/api/profile", {
           withCredentials: true,
         });
 
@@ -43,13 +43,13 @@ export default function Profile() {
     try {
       if (field === "password") {
         await axios.put(
-          "http://localhost:5000/api/profile/password",
+          "https://yatra-backend-admin.onrender.com/api/profile/password",
           { password: tempValue },
           { withCredentials: true }
         );
       } else {
         await axios.put(
-          "http://localhost:5000/api/profile",
+          "https://yatra-backend-admin.onrender.com/api/profile",
           { [field]: tempValue },
           { withCredentials: true }
         );

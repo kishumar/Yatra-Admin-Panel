@@ -14,7 +14,7 @@ export default function DriverDetails({collapsed}) {
   useEffect(() => {
     const fetchDriver = async () => {
       try {
-        const res = await axios.get(`http://localhost:5000/api/drivers/${id}`);
+        const res = await axios.get(`https://yatra-backend-admin.onrender.com/api/drivers/${id}`);
         setDriver(res.data);
       } catch (error) {
         toast.error("Failed to load driver details");

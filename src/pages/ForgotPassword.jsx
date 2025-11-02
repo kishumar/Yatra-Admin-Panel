@@ -13,7 +13,7 @@ export default function ForgotPassword() {
     e.preventDefault();
     try {
       const res = await axios.post(
-        "http://localhost:5000/api/auth/forgot-password",
+        "https://yatra-backend-admin.onrender.com/api/auth/forgot-password",
         { email, securityAnswer }
       );
       toast.success(res.data.message);
